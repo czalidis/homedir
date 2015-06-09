@@ -115,6 +115,9 @@ set pumheight=6
 " set vim to 256 colors to work with terminals
 set t_Co=256
 
+" Change the visual highlight color to match my terminal color
+highlight Visual ctermfg=None ctermbg=DarkGrey
+
 
 " EDITOR SETTINGS
 " Use case insensitive search, except when using capital letters
@@ -135,8 +138,8 @@ set whichwrap+=h,l
 set smarttab " smart tab handling for indenting
 set magic " change the way backslashes are used in search patterns
 
-"set nobackup " no backup~ files.
-"set noswapfile " no .swp files.
+set nobackup " no backup~ files.
+set noswapfile " no .swp files.
 
 " Indentation settings for using 2 spaces instead of tabs.
 " Do not change 'tabstop' from its default value of 8 with this setup.
@@ -221,7 +224,8 @@ nmap <leader>f :NERDTreeFind<CR>
 " TagBar
 " toogle TagBar with <F8>
 nmap <F8> :TagbarToggle<CR>
-
+" Change the color to match with my terminal color
+highlight TagbarHighLight ctermbg=Yellow ctermfg=Black
 
 " mini-bufexpl customization
 " set minibufexp to split vertically and to the right
